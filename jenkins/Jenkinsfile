@@ -1,0 +1,56 @@
+// SCRIPTED Pipeline — paste into given project as Jenkinsfile or Jenkins → Pipeline script.
+// Requirements: Git, Maven, Docker on WINDOWS agent; Docker Hub access token: Jenkins Secret text ID dockerhub-token.
+// Replace Git URL, Docker username, notification email. For Linux change bat syntax to sh syntax.
+// This example builds a Maven WAR and a Dockerfile already present in that Maven project.
+node {
+    def gitUrl = 'https://github.com/USERNAME/PROJECT.git'
+    def hubUser = 'YOUR_DOCKERHUB_USERNAME'
+    def imageName = "${hubUser}/myapp"
+    def tagName = "${env.BUILD_NUMBER}"
+    def status = 'SUCCESS'
+    try {
+        stage('Checkout') {
+            git branch: 'main', url: gitUrl
+        }
+        stage('Clean') {
+            bat 'mvn clean'
+        }
+        stage('Build') {
+            bat 'mvn compile'
+        }
+        stage('Test') {
+            bat 'mvn test'
+        }
+        stage('Package') {
+            bat 'mvn package'
+            archiveArtifacts artifacts: 'target/*.war', allowEmptyArchive: true
+        }
+        stage('Docker Build') {
+            bat "docker build -t ${imageName}:${tagName} ."
+        }
+        stage('Docker Push') {
+            withCredentials([string(credentialsId: 'dockerhub-token', variable: 'HUB_TOKEN')]) {
+                withEnv(["HUB_USER=${hubUser}", "IMAGE_NAME=${imageName}", "IMAGE_TAG=${tagName}"]) {
+                    bat '''
+@echo off
+echo %HUB_TOKEN% | docker login -u %HUB_USER% --password-stdin
+if errorlevel 1 exit /b 1
+docker push %IMAGE_NAME%:%IMAGE_TAG%
+if errorlevel 1 exit /b 1
+docker logout
+'''
+                }
+            }
+        }
+        currentBuild.result = 'SUCCESS'
+    } catch (e) {
+        status = 'FAILURE'
+        currentBuild.result = 'FAILURE'
+        throw e
+    } finally {
+        // Requires Email Extension and Jenkins Extended E-mail SMTP configuration.
+        emailext to: 'team@example.com',
+                 subject: "${status}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "Status: ${status}\nBuild: ${env.BUILD_URL}"
+    }
+}

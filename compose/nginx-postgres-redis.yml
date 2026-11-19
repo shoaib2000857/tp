@@ -1,0 +1,23 @@
+# Run from repo root: docker compose -f compose/nginx-postgres-redis.yml up -d
+# Faculty Week 6 exercise: services share a network; stock nginx doesn't actually query DB/Redis.
+services:
+  web:
+    image: nginx:latest
+    ports: ["8080:80"]
+    depends_on: [db, redis]
+    networks: [app-net]
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: examonly
+      POSTGRES_DB: demo_db
+    volumes: [db-data:/var/lib/postgresql/data]
+    networks: [app-net]
+  redis:
+    image: redis:alpine
+    networks: [app-net]
+networks:
+  app-net:
+volumes:
+  db-data:

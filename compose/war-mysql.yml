@@ -1,0 +1,34 @@
+# Run in Maven project directory after "mvn clean package": copy this to docker-compose.yml
+# For EXISTING Docker Hub app: replace "build: ." with "image: YOUR_USER/YOUR_APP:latest"
+# For local WAR: copy docker/Tomcat.Dockerfile to the project root as Dockerfile
+# Browser http://localhost:8080/app/ (for app.war). JDBC inside web container: jdbc:mysql://db:3306/college
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [app-net]
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: examroot
+      MYSQL_DATABASE: college
+      MYSQL_USER: student
+      MYSQL_PASSWORD: examonly
+    ports:
+      - "3307:3306"   # only if host tools need DB; omit for isolation
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks: [app-net]
+networks:
+  app-net:
+volumes:
+  mysql-data:

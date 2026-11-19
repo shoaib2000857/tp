@@ -1,0 +1,10 @@
+# cd compose/flask-nginx && docker compose up -d --build
+# Flask: http://localhost:5000  |  Nginx: http://localhost/
+# Nginx serves its stock page, NOT a reverse proxy; both independent as asked in CSM Set 5.
+services:
+  flask:
+    build: .
+    ports: ["5000:5000"]
+  nginx:
+    image: nginx:latest
+    ports: ["80:80"]

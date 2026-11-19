@@ -1,0 +1,15 @@
+# Run from repo root: docker compose -f compose/nagios.yml up -d
+# Web http://localhost:8080 | Nagios http://localhost:8888
+# To ACTUALLY monitor the web, add nagios/webapp.cfg into Nagios cfg and register it.
+services:
+  web:
+    image: nginx:latest
+    ports: ["8080:80"]
+    networks: [monitor-net]
+  nagios:
+    image: jasonrivers/nagios:latest
+    ports: ["8888:80"]
+    depends_on: [web]
+    networks: [monitor-net]
+networks:
+  monitor-net:

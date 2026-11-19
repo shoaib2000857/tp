@@ -1,0 +1,10 @@
+# Never commit keys/tokens
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+secrets/
+target/
+*.war
+*.jar
