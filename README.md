@@ -1,5 +1,3 @@
-# KMIT SE Lab — ONE-PAGE EXAM CHEAT SHEET
-
 **Clone:** `git clone https://github.com/shoaib2000857/se.git` — open this README. **Replace `YOUR_...` placeholders.** Run commands **inside the appropriate folder**, except Jenkins GUI and AWS SSH. **Never push passwords, .pem keys or real tokens.**
 
 | Question says… | Open / do |
