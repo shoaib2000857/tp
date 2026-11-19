@@ -1,0 +1,25 @@
+# Independent Flask + PostgreSQL + Redis practical.
+services:
+  web:
+    build: ./flask
+    ports: ["5007:5000"]
+    depends_on:
+      db: {condition: service_healthy}
+      redis: {condition: service_started}
+    networks: [app-net]
+  db:
+    image: postgres:15
+    environment: {POSTGRES_USER: exam, POSTGRES_PASSWORD: examonly, POSTGRES_DB: sports}
+    volumes: [db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U exam -d sports"]
+      interval: 10s
+      retries: 12
+    networks: [app-net]
+  redis:
+    image: redis:alpine
+    networks: [app-net]
+networks:
+  app-net:
+volumes:
+  db-data:

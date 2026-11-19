@@ -1,0 +1,22 @@
+# Independent WordPress/MySQL Docker question (not the Java GitHub app).
+services:
+  wordpress:
+    image: wordpress:latest
+    ports: ["8084:80"]
+    environment: {WORDPRESS_DB_HOST: "db:3306", WORDPRESS_DB_USER: exam, WORDPRESS_DB_PASSWORD: examonly, WORDPRESS_DB_NAME: wordpress}
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [app-net]
+  db:
+    image: mysql:8.0
+    environment: {MYSQL_ROOT_PASSWORD: examroot, MYSQL_DATABASE: wordpress, MYSQL_USER: exam, MYSQL_PASSWORD: examonly}
+    volumes: [db-data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 10s
+      retries: 12
+    networks: [app-net]
+networks:
+  app-net:
+volumes:
+  db-data:

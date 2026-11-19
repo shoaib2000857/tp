@@ -1,0 +1,21 @@
+# WAR image from this paper's Java repo + postgres:15.
+services:
+  web:
+    image: YOUR_DOCKERHUB_USERNAME/set8:v1
+    ports: ["8088:8080"]
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [app-net]
+  db:
+    image: postgres:15
+    environment: {POSTGRES_USER: exam, POSTGRES_PASSWORD: examonly, POSTGRES_DB: examdb}
+    volumes: [db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U exam -d examdb"]
+      interval: 10s
+      retries: 12
+    networks: [app-net]
+networks:
+  app-net:
+volumes:
+  db-data:

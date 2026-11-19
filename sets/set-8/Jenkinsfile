@@ -1,0 +1,23 @@
+// Windows Scripted Jenkins pipeline. Set Maven tool MAVEN_HOME in Manage Jenkins > Tools.
+// Copy into your writable fork root for a webhook build; original repo is read-only.
+node {
+    def mvnHome = tool 'MAVEN_HOME'
+    try {
+        stage('Checkout') { git branch: 'main', url: 'https://github.com/sarasrija/BloodBanksystem.git' }
+        withEnv(["PATH+MAVEN=${mvnHome}\\bin"]) {
+            stage('Clean') { bat 'mvn clean' }
+            stage('Build') { bat 'mvn compile' }
+            stage('Test') { bat 'mvn test' }
+            stage('Package') {
+                bat 'mvn package'
+                archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+            }
+        }
+        echo "Build number: ${env.BUILD_NUMBER}"
+    } catch (err) {
+        currentBuild.result = 'FAILURE'
+        throw err
+    }
+}
+// For Set 8's install stage, insert: stage('Install') { bat 'mvn install' }.
+// For Linux Jenkins replace bat with sh and adjust Maven PATH. For Set 9 also deploy WAR to Tomcat.
