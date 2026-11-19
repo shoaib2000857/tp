@@ -1,0 +1,21 @@
+# Java WAR container + MySQL; real JDBC features require source code support.
+services:
+  web:
+    image: YOUR_DOCKERHUB_USERNAME/set2:v1
+    ports: ["8082:8080"]
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [hms-net]
+  db:
+    image: mysql:8.0
+    environment: {MYSQL_ROOT_PASSWORD: examroot, MYSQL_DATABASE: examdb, MYSQL_USER: exam, MYSQL_PASSWORD: examonly}
+    volumes: [db-data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 10s
+      retries: 12
+    networks: [hms-net]
+networks:
+  hms-net:
+volumes:
+  db-data:
