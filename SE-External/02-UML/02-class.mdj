@@ -1,0 +1,1176 @@
+{
+  "_type": "Project",
+  "_id": "seuml-000058",
+  "name": "02 - Class Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "seuml-000059",
+      "_parent": {
+        "$ref": "seuml-000058"
+      },
+      "name": "Hospital Appointment System",
+      "ownedElements": [
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "seuml-000060",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "02 - Class Diagram",
+          "ownedViews": [
+            {
+              "_type": "UMLClassView",
+              "_id": "seuml-000066",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000061"
+              },
+              "left": 315,
+              "top": 20,
+              "width": 220,
+              "height": 125,
+              "font": "Arial;13;0",
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "seuml-000067",
+                  "_parent": {
+                    "$ref": "seuml-000066"
+                  },
+                  "model": {
+                    "$ref": "seuml-000061"
+                  },
+                  "left": 315,
+                  "top": 20,
+                  "width": 220,
+                  "height": 32,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "seuml-000068",
+                      "_parent": {
+                        "$ref": "seuml-000067"
+                      },
+                      "text": "User",
+                      "left": 319,
+                      "top": 28,
+                      "width": 212,
+                      "height": 18,
+                      "font": "Arial;13;1"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "seuml-000068"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "seuml-000069",
+                  "_parent": {
+                    "$ref": "seuml-000066"
+                  },
+                  "model": {
+                    "$ref": "seuml-000061"
+                  },
+                  "left": 315,
+                  "top": 54,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000070",
+                      "_parent": {
+                        "$ref": "seuml-000069"
+                      },
+                      "model": {
+                        "$ref": "seuml-000062"
+                      },
+                      "left": 321,
+                      "top": 54,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- userId: int",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000071",
+                      "_parent": {
+                        "$ref": "seuml-000069"
+                      },
+                      "model": {
+                        "$ref": "seuml-000063"
+                      },
+                      "left": 321,
+                      "top": 69,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- name: String",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000072",
+                      "_parent": {
+                        "$ref": "seuml-000069"
+                      },
+                      "model": {
+                        "$ref": "seuml-000064"
+                      },
+                      "left": 321,
+                      "top": 84,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- email: String",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "seuml-000073",
+                  "_parent": {
+                    "$ref": "seuml-000066"
+                  },
+                  "model": {
+                    "$ref": "seuml-000061"
+                  },
+                  "left": 315,
+                  "top": 95,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000074",
+                      "_parent": {
+                        "$ref": "seuml-000073"
+                      },
+                      "model": {
+                        "$ref": "seuml-000065"
+                      },
+                      "left": 321,
+                      "top": 95,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ login(): boolean",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                }
+              ],
+              "nameCompartment": {
+                "$ref": "seuml-000067"
+              },
+              "attributeCompartment": {
+                "$ref": "seuml-000069"
+              },
+              "operationCompartment": {
+                "$ref": "seuml-000073"
+              }
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "seuml-000079",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000075"
+              },
+              "left": 40,
+              "top": 230,
+              "width": 220,
+              "height": 125,
+              "font": "Arial;13;0",
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "seuml-000080",
+                  "_parent": {
+                    "$ref": "seuml-000079"
+                  },
+                  "model": {
+                    "$ref": "seuml-000075"
+                  },
+                  "left": 40,
+                  "top": 230,
+                  "width": 220,
+                  "height": 32,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "seuml-000081",
+                      "_parent": {
+                        "$ref": "seuml-000080"
+                      },
+                      "text": "Patient",
+                      "left": 44,
+                      "top": 238,
+                      "width": 212,
+                      "height": 18,
+                      "font": "Arial;13;1"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "seuml-000081"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "seuml-000082",
+                  "_parent": {
+                    "$ref": "seuml-000079"
+                  },
+                  "model": {
+                    "$ref": "seuml-000075"
+                  },
+                  "left": 40,
+                  "top": 264,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000083",
+                      "_parent": {
+                        "$ref": "seuml-000082"
+                      },
+                      "model": {
+                        "$ref": "seuml-000076"
+                      },
+                      "left": 46,
+                      "top": 264,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- patientId: int",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "seuml-000084",
+                  "_parent": {
+                    "$ref": "seuml-000079"
+                  },
+                  "model": {
+                    "$ref": "seuml-000075"
+                  },
+                  "left": 40,
+                  "top": 305,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000085",
+                      "_parent": {
+                        "$ref": "seuml-000084"
+                      },
+                      "model": {
+                        "$ref": "seuml-000077"
+                      },
+                      "left": 46,
+                      "top": 305,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ bookAppointment(): void",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000086",
+                      "_parent": {
+                        "$ref": "seuml-000084"
+                      },
+                      "model": {
+                        "$ref": "seuml-000078"
+                      },
+                      "left": 46,
+                      "top": 320,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ cancelAppointment(): void",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                }
+              ],
+              "nameCompartment": {
+                "$ref": "seuml-000080"
+              },
+              "attributeCompartment": {
+                "$ref": "seuml-000082"
+              },
+              "operationCompartment": {
+                "$ref": "seuml-000084"
+              }
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "seuml-000091",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000087"
+              },
+              "left": 340,
+              "top": 230,
+              "width": 220,
+              "height": 125,
+              "font": "Arial;13;0",
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "seuml-000092",
+                  "_parent": {
+                    "$ref": "seuml-000091"
+                  },
+                  "model": {
+                    "$ref": "seuml-000087"
+                  },
+                  "left": 340,
+                  "top": 230,
+                  "width": 220,
+                  "height": 32,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "seuml-000093",
+                      "_parent": {
+                        "$ref": "seuml-000092"
+                      },
+                      "text": "Doctor",
+                      "left": 344,
+                      "top": 238,
+                      "width": 212,
+                      "height": 18,
+                      "font": "Arial;13;1"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "seuml-000093"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "seuml-000094",
+                  "_parent": {
+                    "$ref": "seuml-000091"
+                  },
+                  "model": {
+                    "$ref": "seuml-000087"
+                  },
+                  "left": 340,
+                  "top": 264,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000095",
+                      "_parent": {
+                        "$ref": "seuml-000094"
+                      },
+                      "model": {
+                        "$ref": "seuml-000088"
+                      },
+                      "left": 346,
+                      "top": 264,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- doctorId: int",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000096",
+                      "_parent": {
+                        "$ref": "seuml-000094"
+                      },
+                      "model": {
+                        "$ref": "seuml-000089"
+                      },
+                      "left": 346,
+                      "top": 279,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- specialization: String",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "seuml-000097",
+                  "_parent": {
+                    "$ref": "seuml-000091"
+                  },
+                  "model": {
+                    "$ref": "seuml-000087"
+                  },
+                  "left": 340,
+                  "top": 305,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000098",
+                      "_parent": {
+                        "$ref": "seuml-000097"
+                      },
+                      "model": {
+                        "$ref": "seuml-000090"
+                      },
+                      "left": 346,
+                      "top": 305,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ updateSchedule(): void",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                }
+              ],
+              "nameCompartment": {
+                "$ref": "seuml-000092"
+              },
+              "attributeCompartment": {
+                "$ref": "seuml-000094"
+              },
+              "operationCompartment": {
+                "$ref": "seuml-000097"
+              }
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "seuml-000102",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000099"
+              },
+              "left": 645,
+              "top": 230,
+              "width": 220,
+              "height": 125,
+              "font": "Arial;13;0",
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "seuml-000103",
+                  "_parent": {
+                    "$ref": "seuml-000102"
+                  },
+                  "model": {
+                    "$ref": "seuml-000099"
+                  },
+                  "left": 645,
+                  "top": 230,
+                  "width": 220,
+                  "height": 32,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "seuml-000104",
+                      "_parent": {
+                        "$ref": "seuml-000103"
+                      },
+                      "text": "Administrator",
+                      "left": 649,
+                      "top": 238,
+                      "width": 212,
+                      "height": 18,
+                      "font": "Arial;13;1"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "seuml-000104"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "seuml-000105",
+                  "_parent": {
+                    "$ref": "seuml-000102"
+                  },
+                  "model": {
+                    "$ref": "seuml-000099"
+                  },
+                  "left": 645,
+                  "top": 264,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000106",
+                      "_parent": {
+                        "$ref": "seuml-000105"
+                      },
+                      "model": {
+                        "$ref": "seuml-000100"
+                      },
+                      "left": 651,
+                      "top": 264,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- adminId: int",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "seuml-000107",
+                  "_parent": {
+                    "$ref": "seuml-000102"
+                  },
+                  "model": {
+                    "$ref": "seuml-000099"
+                  },
+                  "left": 645,
+                  "top": 305,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000108",
+                      "_parent": {
+                        "$ref": "seuml-000107"
+                      },
+                      "model": {
+                        "$ref": "seuml-000101"
+                      },
+                      "left": 651,
+                      "top": 305,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ manageUsers(): void",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                }
+              ],
+              "nameCompartment": {
+                "$ref": "seuml-000103"
+              },
+              "attributeCompartment": {
+                "$ref": "seuml-000105"
+              },
+              "operationCompartment": {
+                "$ref": "seuml-000107"
+              }
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "seuml-000115",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000109"
+              },
+              "left": 350,
+              "top": 475,
+              "width": 220,
+              "height": 125,
+              "font": "Arial;13;0",
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "seuml-000116",
+                  "_parent": {
+                    "$ref": "seuml-000115"
+                  },
+                  "model": {
+                    "$ref": "seuml-000109"
+                  },
+                  "left": 350,
+                  "top": 475,
+                  "width": 220,
+                  "height": 32,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "seuml-000117",
+                      "_parent": {
+                        "$ref": "seuml-000116"
+                      },
+                      "text": "Appointment",
+                      "left": 354,
+                      "top": 483,
+                      "width": 212,
+                      "height": 18,
+                      "font": "Arial;13;1"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "seuml-000117"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "seuml-000118",
+                  "_parent": {
+                    "$ref": "seuml-000115"
+                  },
+                  "model": {
+                    "$ref": "seuml-000109"
+                  },
+                  "left": 350,
+                  "top": 509,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000119",
+                      "_parent": {
+                        "$ref": "seuml-000118"
+                      },
+                      "model": {
+                        "$ref": "seuml-000110"
+                      },
+                      "left": 356,
+                      "top": 509,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- appointmentId: int",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000120",
+                      "_parent": {
+                        "$ref": "seuml-000118"
+                      },
+                      "model": {
+                        "$ref": "seuml-000111"
+                      },
+                      "left": 356,
+                      "top": 524,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- dateTime: DateTime",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLAttributeView",
+                      "_id": "seuml-000121",
+                      "_parent": {
+                        "$ref": "seuml-000118"
+                      },
+                      "model": {
+                        "$ref": "seuml-000112"
+                      },
+                      "left": 356,
+                      "top": 539,
+                      "width": 200,
+                      "height": 15,
+                      "text": "- status: String",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "seuml-000122",
+                  "_parent": {
+                    "$ref": "seuml-000115"
+                  },
+                  "model": {
+                    "$ref": "seuml-000109"
+                  },
+                  "left": 350,
+                  "top": 550,
+                  "width": 220,
+                  "height": 43,
+                  "subViews": [
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000123",
+                      "_parent": {
+                        "$ref": "seuml-000122"
+                      },
+                      "model": {
+                        "$ref": "seuml-000113"
+                      },
+                      "left": 356,
+                      "top": 550,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ confirm(): void",
+                      "font": "Arial;13;0"
+                    },
+                    {
+                      "_type": "UMLOperationView",
+                      "_id": "seuml-000124",
+                      "_parent": {
+                        "$ref": "seuml-000122"
+                      },
+                      "model": {
+                        "$ref": "seuml-000114"
+                      },
+                      "left": 356,
+                      "top": 565,
+                      "width": 200,
+                      "height": 15,
+                      "text": "+ cancel(): void",
+                      "font": "Arial;13;0"
+                    }
+                  ]
+                }
+              ],
+              "nameCompartment": {
+                "$ref": "seuml-000116"
+              },
+              "attributeCompartment": {
+                "$ref": "seuml-000118"
+              },
+              "operationCompartment": {
+                "$ref": "seuml-000122"
+              }
+            },
+            {
+              "_type": "UMLGeneralizationView",
+              "_id": "seuml-000126",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000125"
+              },
+              "tail": {
+                "$ref": "seuml-000079"
+              },
+              "head": {
+                "$ref": "seuml-000066"
+              },
+              "points": "150:293;425:83",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLGeneralizationView",
+              "_id": "seuml-000128",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000127"
+              },
+              "tail": {
+                "$ref": "seuml-000091"
+              },
+              "head": {
+                "$ref": "seuml-000066"
+              },
+              "points": "450:293;425:83",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLGeneralizationView",
+              "_id": "seuml-000130",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000129"
+              },
+              "tail": {
+                "$ref": "seuml-000102"
+              },
+              "head": {
+                "$ref": "seuml-000066"
+              },
+              "points": "755:293;425:83",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000134",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000131"
+              },
+              "tail": {
+                "$ref": "seuml-000079"
+              },
+              "head": {
+                "$ref": "seuml-000115"
+              },
+              "points": "150:355;460:475",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000138",
+              "_parent": {
+                "$ref": "seuml-000060"
+              },
+              "model": {
+                "$ref": "seuml-000135"
+              },
+              "tail": {
+                "$ref": "seuml-000091"
+              },
+              "head": {
+                "$ref": "seuml-000115"
+              },
+              "points": "450:355;460:475",
+              "lineStyle": 1
+            }
+          ],
+          "defaultDiagram": true
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "seuml-000061",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "User",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000062",
+              "_parent": {
+                "$ref": "seuml-000061"
+              },
+              "name": "userId",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000063",
+              "_parent": {
+                "$ref": "seuml-000061"
+              },
+              "name": "name",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000064",
+              "_parent": {
+                "$ref": "seuml-000061"
+              },
+              "name": "email",
+              "type": "String",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000065",
+              "_parent": {
+                "$ref": "seuml-000061"
+              },
+              "name": "login",
+              "returnType": "boolean",
+              "visibility": "public"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "seuml-000075",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "Patient",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000076",
+              "_parent": {
+                "$ref": "seuml-000075"
+              },
+              "name": "patientId",
+              "type": "int",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000077",
+              "_parent": {
+                "$ref": "seuml-000075"
+              },
+              "name": "bookAppointment",
+              "returnType": "void",
+              "visibility": "public"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000078",
+              "_parent": {
+                "$ref": "seuml-000075"
+              },
+              "name": "cancelAppointment",
+              "returnType": "void",
+              "visibility": "public"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "seuml-000087",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "Doctor",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000088",
+              "_parent": {
+                "$ref": "seuml-000087"
+              },
+              "name": "doctorId",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000089",
+              "_parent": {
+                "$ref": "seuml-000087"
+              },
+              "name": "specialization",
+              "type": "String",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000090",
+              "_parent": {
+                "$ref": "seuml-000087"
+              },
+              "name": "updateSchedule",
+              "returnType": "void",
+              "visibility": "public"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "seuml-000099",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "Administrator",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000100",
+              "_parent": {
+                "$ref": "seuml-000099"
+              },
+              "name": "adminId",
+              "type": "int",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000101",
+              "_parent": {
+                "$ref": "seuml-000099"
+              },
+              "name": "manageUsers",
+              "returnType": "void",
+              "visibility": "public"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "seuml-000109",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "Appointment",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000110",
+              "_parent": {
+                "$ref": "seuml-000109"
+              },
+              "name": "appointmentId",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000111",
+              "_parent": {
+                "$ref": "seuml-000109"
+              },
+              "name": "dateTime",
+              "type": "DateTime",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "seuml-000112",
+              "_parent": {
+                "$ref": "seuml-000109"
+              },
+              "name": "status",
+              "type": "String",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000113",
+              "_parent": {
+                "$ref": "seuml-000109"
+              },
+              "name": "confirm",
+              "returnType": "void",
+              "visibility": "public"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "seuml-000114",
+              "_parent": {
+                "$ref": "seuml-000109"
+              },
+              "name": "cancel",
+              "returnType": "void",
+              "visibility": "public"
+            }
+          ]
+        },
+        {
+          "_type": "UMLGeneralization",
+          "_id": "seuml-000125",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "",
+          "source": {
+            "$ref": "seuml-000075"
+          },
+          "target": {
+            "$ref": "seuml-000061"
+          }
+        },
+        {
+          "_type": "UMLGeneralization",
+          "_id": "seuml-000127",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "",
+          "source": {
+            "$ref": "seuml-000087"
+          },
+          "target": {
+            "$ref": "seuml-000061"
+          }
+        },
+        {
+          "_type": "UMLGeneralization",
+          "_id": "seuml-000129",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "",
+          "source": {
+            "$ref": "seuml-000099"
+          },
+          "target": {
+            "$ref": "seuml-000061"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000131",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000132",
+            "_parent": {
+              "$ref": "seuml-000131"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000075"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000133",
+            "_parent": {
+              "$ref": "seuml-000131"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000109"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000135",
+          "_parent": {
+            "$ref": "seuml-000059"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000136",
+            "_parent": {
+              "$ref": "seuml-000135"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000087"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000137",
+            "_parent": {
+              "$ref": "seuml-000135"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000109"
+            },
+            "multiplicity": "0..*"
+          }
+        }
+      ]
+    }
+  ]
+}
