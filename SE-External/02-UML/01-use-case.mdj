@@ -1,0 +1,665 @@
+{
+  "_type": "Project",
+  "_id": "seuml-000001",
+  "name": "01 - Use Case Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "seuml-000002",
+      "_parent": {
+        "$ref": "seuml-000001"
+      },
+      "name": "Hospital Appointment System",
+      "ownedElements": [
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "seuml-000003",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "01 - Use Case Diagram",
+          "ownedViews": [
+            {
+              "_type": "UMLActorView",
+              "_id": "seuml-000005",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000004"
+              },
+              "left": 30,
+              "top": 130,
+              "width": 90,
+              "height": 100,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "seuml-000007",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000006"
+              },
+              "left": 780,
+              "top": 145,
+              "width": 90,
+              "height": 100,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "seuml-000009",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000008"
+              },
+              "left": 780,
+              "top": 400,
+              "width": 90,
+              "height": 100,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000011",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000010"
+              },
+              "left": 300,
+              "top": 40,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000013",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000012"
+              },
+              "left": 300,
+              "top": 105,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000015",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000014"
+              },
+              "left": 300,
+              "top": 170,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000017",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000016"
+              },
+              "left": 300,
+              "top": 235,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000019",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000018"
+              },
+              "left": 300,
+              "top": 300,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000021",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000020"
+              },
+              "left": 555,
+              "top": 170,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000023",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000022"
+              },
+              "left": 555,
+              "top": 235,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "seuml-000025",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000024"
+              },
+              "left": 555,
+              "top": 395,
+              "width": 178,
+              "height": 52,
+              "font": "Arial;13;0"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000029",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000026"
+              },
+              "tail": {
+                "$ref": "seuml-000005"
+              },
+              "head": {
+                "$ref": "seuml-000011"
+              },
+              "points": "75:180;390:66",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000033",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000030"
+              },
+              "tail": {
+                "$ref": "seuml-000005"
+              },
+              "head": {
+                "$ref": "seuml-000013"
+              },
+              "points": "75:180;390:131",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000037",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000034"
+              },
+              "tail": {
+                "$ref": "seuml-000005"
+              },
+              "head": {
+                "$ref": "seuml-000015"
+              },
+              "points": "75:180;390:196",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000041",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000038"
+              },
+              "tail": {
+                "$ref": "seuml-000005"
+              },
+              "head": {
+                "$ref": "seuml-000017"
+              },
+              "points": "75:180;390:261",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000045",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000042"
+              },
+              "tail": {
+                "$ref": "seuml-000005"
+              },
+              "head": {
+                "$ref": "seuml-000019"
+              },
+              "points": "75:180;390:326",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000049",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000046"
+              },
+              "tail": {
+                "$ref": "seuml-000007"
+              },
+              "head": {
+                "$ref": "seuml-000021"
+              },
+              "points": "825:195;645:196",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000053",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000050"
+              },
+              "tail": {
+                "$ref": "seuml-000007"
+              },
+              "head": {
+                "$ref": "seuml-000023"
+              },
+              "points": "825:195;645:261",
+              "lineStyle": 1
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "seuml-000057",
+              "_parent": {
+                "$ref": "seuml-000003"
+              },
+              "model": {
+                "$ref": "seuml-000054"
+              },
+              "tail": {
+                "$ref": "seuml-000009"
+              },
+              "head": {
+                "$ref": "seuml-000025"
+              },
+              "points": "825:450;645:421",
+              "lineStyle": 1
+            }
+          ],
+          "defaultDiagram": true
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "seuml-000004",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Patient"
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "seuml-000006",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Doctor"
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "seuml-000008",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Administrator"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000010",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Register / Login"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000012",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Search Doctors"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000014",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "View Available Slots"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000016",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Book Appointment"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000018",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Cancel Appointment"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000020",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Manage Schedule"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000022",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "View Appointments"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "seuml-000024",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "Manage Users"
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000026",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000027",
+            "_parent": {
+              "$ref": "seuml-000026"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000004"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000028",
+            "_parent": {
+              "$ref": "seuml-000026"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000010"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000030",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000031",
+            "_parent": {
+              "$ref": "seuml-000030"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000004"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000032",
+            "_parent": {
+              "$ref": "seuml-000030"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000012"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000034",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000035",
+            "_parent": {
+              "$ref": "seuml-000034"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000004"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000036",
+            "_parent": {
+              "$ref": "seuml-000034"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000014"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000038",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000039",
+            "_parent": {
+              "$ref": "seuml-000038"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000004"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000040",
+            "_parent": {
+              "$ref": "seuml-000038"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000016"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000042",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000043",
+            "_parent": {
+              "$ref": "seuml-000042"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000004"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000044",
+            "_parent": {
+              "$ref": "seuml-000042"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000018"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000046",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000047",
+            "_parent": {
+              "$ref": "seuml-000046"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000006"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000048",
+            "_parent": {
+              "$ref": "seuml-000046"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000020"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000050",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000051",
+            "_parent": {
+              "$ref": "seuml-000050"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000006"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000052",
+            "_parent": {
+              "$ref": "seuml-000050"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000022"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "seuml-000054",
+          "_parent": {
+            "$ref": "seuml-000002"
+          },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000055",
+            "_parent": {
+              "$ref": "seuml-000054"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000008"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "seuml-000056",
+            "_parent": {
+              "$ref": "seuml-000054"
+            },
+            "name": "",
+            "reference": {
+              "$ref": "seuml-000024"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
