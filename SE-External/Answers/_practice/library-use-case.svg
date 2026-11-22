@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 365" width="820" height="365" role="img" aria-labelledby="title desc">
+  <title id="title">Library System use case diagram</title>
+  <desc id="desc">Member is associated with Search Catalog. Librarian is associated with Issue Book and Return Book.</desc>
+  <rect width="820" height="365" fill="white"/>
+  <g stroke="#23344a" stroke-width="2" fill="none">
+    <rect x="210" y="45" width="400" height="285" fill="#f6f9fd"/>
+    <path d="M 108 114 H 310 M 712 214 L 510 190 M 712 214 L 510 266"/>
+    <g fill="white">
+      <ellipse cx="410" cy="114" rx="100" ry="26"/>
+      <ellipse cx="410" cy="190" rx="100" ry="26"/>
+      <ellipse cx="410" cy="266" rx="100" ry="26"/>
+      <circle cx="89" cy="93" r="9"/>
+      <circle cx="731" cy="193" r="9"/>
+    </g>
+    <path d="M 89 102 V 125 L 75 141 M 89 125 L 103 141 M 70 114 H 108 M 731 202 V 225 L 717 241 M 731 225 L 745 241 M 712 214 H 750"/>
+  </g>
+  <g fill="#23344a" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="410" y="70" font-weight="bold">Library System</text>
+    <text x="410" y="120">Search Catalog</text>
+    <text x="410" y="196">Issue Book</text>
+    <text x="410" y="272">Return Book</text>
+    <text x="89" y="161">Member</text>
+    <text x="731" y="261">Librarian</text>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "_type": "Project", "_id": "lib-project", "name": "Library System",
+  "ownedElements": [{
+    "_type": "UMLModel", "_id": "lib-model", "_parent": {"$ref": "lib-project"}, "name": "Library Model",
+    "ownedElements": [
+      {"_type": "UMLUseCaseDiagram", "_id": "lib-diagram", "_parent": {"$ref": "lib-model"}, "name": "Library Use Cases", "defaultDiagram": true,
+        "ownedViews": [
+          {"_type": "UMLUseCaseSubjectView", "_id": "v-system", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "system"}, "left": 210, "top": 45, "width": 400, "height": 285,
+            "containedViews": [{"$ref": "v-search"}, {"$ref": "v-issue"}, {"$ref": "v-return"}]},
+          {"_type": "UMLActorView", "_id": "v-member", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "member"}, "left": 44, "top": 74, "width": 90, "height": 80, "font": "Arial;13;0"},
+          {"_type": "UMLActorView", "_id": "v-librarian", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "librarian"}, "left": 686, "top": 174, "width": 90, "height": 80, "font": "Arial;13;0"},
+          {"_type": "UMLUseCaseView", "_id": "v-search", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "search"}, "containerView": {"$ref": "v-system"}, "left": 310, "top": 88, "width": 200, "height": 52, "font": "Arial;13;0"},
+          {"_type": "UMLUseCaseView", "_id": "v-issue", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "issue"}, "containerView": {"$ref": "v-system"}, "left": 310, "top": 164, "width": 200, "height": 52, "font": "Arial;13;0"},
+          {"_type": "UMLUseCaseView", "_id": "v-return", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "return"}, "containerView": {"$ref": "v-system"}, "left": 310, "top": 240, "width": 200, "height": 52, "font": "Arial;13;0"},
+          {"_type": "UMLAssociationView", "_id": "v-a-search", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "a-search"}, "tail": {"$ref": "v-member"}, "head": {"$ref": "v-search"}, "points": "134:114;310:114", "lineStyle": 1},
+          {"_type": "UMLAssociationView", "_id": "v-a-issue", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "a-issue"}, "tail": {"$ref": "v-librarian"}, "head": {"$ref": "v-issue"}, "points": "686:214;510:190", "lineStyle": 1},
+          {"_type": "UMLAssociationView", "_id": "v-a-return", "_parent": {"$ref": "lib-diagram"}, "model": {"$ref": "a-return"}, "tail": {"$ref": "v-librarian"}, "head": {"$ref": "v-return"}, "points": "686:214;510:266", "lineStyle": 1}
+        ]
+      },
+      {"_type": "UMLUseCaseSubject", "_id": "system", "_parent": {"$ref": "lib-model"}, "name": "Library System", "ownedElements": [
+        {"_type": "UMLUseCase", "_id": "search", "_parent": {"$ref": "system"}, "name": "Search Catalog"},
+        {"_type": "UMLUseCase", "_id": "issue", "_parent": {"$ref": "system"}, "name": "Issue Book"},
+        {"_type": "UMLUseCase", "_id": "return", "_parent": {"$ref": "system"}, "name": "Return Book"}
+      ]},
+      {"_type": "UMLActor", "_id": "member", "_parent": {"$ref": "lib-model"}, "name": "Member"},
+      {"_type": "UMLActor", "_id": "librarian", "_parent": {"$ref": "lib-model"}, "name": "Librarian"},
+      {"_type": "UMLAssociation", "_id": "a-search", "_parent": {"$ref": "lib-model"}, "end1": {"_type": "UMLAssociationEnd", "_id": "as-1", "_parent": {"$ref": "a-search"}, "reference": {"$ref": "member"}, "navigable": "unspecified"}, "end2": {"_type": "UMLAssociationEnd", "_id": "as-2", "_parent": {"$ref": "a-search"}, "reference": {"$ref": "search"}, "navigable": "unspecified"}},
+      {"_type": "UMLAssociation", "_id": "a-issue", "_parent": {"$ref": "lib-model"}, "end1": {"_type": "UMLAssociationEnd", "_id": "ai-1", "_parent": {"$ref": "a-issue"}, "reference": {"$ref": "librarian"}, "navigable": "unspecified"}, "end2": {"_type": "UMLAssociationEnd", "_id": "ai-2", "_parent": {"$ref": "a-issue"}, "reference": {"$ref": "issue"}, "navigable": "unspecified"}},
+      {"_type": "UMLAssociation", "_id": "a-return", "_parent": {"$ref": "lib-model"}, "end1": {"_type": "UMLAssociationEnd", "_id": "ar-1", "_parent": {"$ref": "a-return"}, "reference": {"$ref": "librarian"}, "navigable": "unspecified"}, "end2": {"_type": "UMLAssociationEnd", "_id": "ar-2", "_parent": {"$ref": "a-return"}, "reference": {"$ref": "return"}, "navigable": "unspecified"}}
+    ]
+  }]
+}
