@@ -1,0 +1,44 @@
+{
+  "_type":"Project", "_id":"cr-project", "name":"Online Course Reservation System",
+  "ownedElements":[{
+    "_type":"UMLModel", "_id":"cr-model", "_parent":{"$ref":"cr-project"}, "name":"Course Reservations",
+    "ownedElements":[
+      {
+        "_type":"UMLUseCaseDiagram", "_id":"cr-diagram", "_parent":{"$ref":"cr-model"}, "name":"Course Reservation Use Cases", "defaultDiagram":true,
+        "ownedViews":[
+          {"_type":"UMLUseCaseSubjectView","_id":"v-subject","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"subject"},"left":220,"top":24,"width":520,"height":396,"font":"Arial;14;0"},
+          {"_type":"UMLActorView","_id":"v-student","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"student"},"left":40,"top":174,"width":90,"height":84,"font":"Arial;14;0"},
+          {"_type":"UMLActorView","_id":"v-admin","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"admin"},"left":830,"top":174,"width":120,"height":84,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-browse","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"browse"},"left":250,"top":76,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-reserve","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"reserve"},"left":250,"top":157,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-view","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"view"},"left":250,"top":238,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-cancel","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"cancel"},"left":250,"top":319,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-manage","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"manage"},"left":506,"top":143,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLUseCaseView","_id":"v-control","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"control"},"left":506,"top":247,"width":208,"height":54,"font":"Arial;14;0"},
+          {"_type":"UMLAssociationView","_id":"v-a1","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a1"},"tail":{"$ref":"v-student"},"head":{"$ref":"v-browse"},"points":"85:216;354:103","lineStyle":1},
+          {"_type":"UMLAssociationView","_id":"v-a2","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a2"},"tail":{"$ref":"v-student"},"head":{"$ref":"v-reserve"},"points":"85:216;354:184","lineStyle":1},
+          {"_type":"UMLAssociationView","_id":"v-a3","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a3"},"tail":{"$ref":"v-student"},"head":{"$ref":"v-view"},"points":"85:216;354:265","lineStyle":1},
+          {"_type":"UMLAssociationView","_id":"v-a4","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a4"},"tail":{"$ref":"v-student"},"head":{"$ref":"v-cancel"},"points":"85:216;354:346","lineStyle":1},
+          {"_type":"UMLAssociationView","_id":"v-a5","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a5"},"tail":{"$ref":"v-admin"},"head":{"$ref":"v-manage"},"points":"890:216;610:170","lineStyle":1},
+          {"_type":"UMLAssociationView","_id":"v-a6","_parent":{"$ref":"cr-diagram"},"model":{"$ref":"a6"},"tail":{"$ref":"v-admin"},"head":{"$ref":"v-control"},"points":"890:216;610:274","lineStyle":1}
+        ]
+      },
+      {"_type":"UMLUseCaseSubject","_id":"subject","_parent":{"$ref":"cr-model"},"name":"Online Course Reservation System","ownedElements":[
+        {"_type":"UMLUseCase","_id":"browse","_parent":{"$ref":"subject"},"name":"Browse Courses"},
+        {"_type":"UMLUseCase","_id":"reserve","_parent":{"$ref":"subject"},"name":"Reserve Seat"},
+        {"_type":"UMLUseCase","_id":"view","_parent":{"$ref":"subject"},"name":"View My Reservations"},
+        {"_type":"UMLUseCase","_id":"cancel","_parent":{"$ref":"subject"},"name":"Cancel Reservation"},
+        {"_type":"UMLUseCase","_id":"manage","_parent":{"$ref":"subject"},"name":"Manage Course Offerings"},
+        {"_type":"UMLUseCase","_id":"control","_parent":{"$ref":"subject"},"name":"Open or Close Reservations"}
+      ]},
+      {"_type":"UMLActor","_id":"student","_parent":{"$ref":"cr-model"},"name":"Student"},
+      {"_type":"UMLActor","_id":"admin","_parent":{"$ref":"cr-model"},"name":"Administrator"},
+      {"_type":"UMLAssociation","_id":"a1","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a1-e1","_parent":{"$ref":"a1"},"reference":{"$ref":"student"}},"end2":{"_type":"UMLAssociationEnd","_id":"a1-e2","_parent":{"$ref":"a1"},"reference":{"$ref":"browse"}}},
+      {"_type":"UMLAssociation","_id":"a2","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a2-e1","_parent":{"$ref":"a2"},"reference":{"$ref":"student"}},"end2":{"_type":"UMLAssociationEnd","_id":"a2-e2","_parent":{"$ref":"a2"},"reference":{"$ref":"reserve"}}},
+      {"_type":"UMLAssociation","_id":"a3","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a3-e1","_parent":{"$ref":"a3"},"reference":{"$ref":"student"}},"end2":{"_type":"UMLAssociationEnd","_id":"a3-e2","_parent":{"$ref":"a3"},"reference":{"$ref":"view"}}},
+      {"_type":"UMLAssociation","_id":"a4","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a4-e1","_parent":{"$ref":"a4"},"reference":{"$ref":"student"}},"end2":{"_type":"UMLAssociationEnd","_id":"a4-e2","_parent":{"$ref":"a4"},"reference":{"$ref":"cancel"}}},
+      {"_type":"UMLAssociation","_id":"a5","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a5-e1","_parent":{"$ref":"a5"},"reference":{"$ref":"admin"}},"end2":{"_type":"UMLAssociationEnd","_id":"a5-e2","_parent":{"$ref":"a5"},"reference":{"$ref":"manage"}}},
+      {"_type":"UMLAssociation","_id":"a6","_parent":{"$ref":"cr-model"},"end1":{"_type":"UMLAssociationEnd","_id":"a6-e1","_parent":{"$ref":"a6"},"reference":{"$ref":"admin"}},"end2":{"_type":"UMLAssociationEnd","_id":"a6-e2","_parent":{"$ref":"a6"},"reference":{"$ref":"control"}}}
+    ]
+  }]
+}
