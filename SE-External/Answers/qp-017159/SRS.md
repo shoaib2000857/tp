@@ -2,21 +2,21 @@
 
 ## Functional requirements
 
-Functional requirements describe what the system shall do. Assume students and administrators already have accounts, and students reserve seats in individual course offerings.
+Functional requirements describe what the system shall do. Assume the college provides student and administrator accounts, and students reserve one seat at a time in a specific course offering.
 
-- **FR-01 — Sign in.** The system shall authenticate students and administrators and show the features available to their role.
-- **FR-02 — Browse courses.** The system shall let students view open course offerings with the title, schedule and available seat count.
-- **FR-03 — Reserve a seat.** The system shall let a student reserve a seat in an open offering if a seat is available and the student has no active reservation for that offering. It shall confirm a successful reservation or explain why the request was rejected.
-- **FR-04 — View reservations.** The system shall let students view their own reservations and their status.
-- **FR-05 — Cancel a reservation.** The system shall let students cancel their own active reservations and release the seats for other students.
-- **FR-06 — Manage course offerings.** The system shall let administrators add offerings, edit schedules and seat limits, and open or close reservations. It shall reject a new seat limit below the number of active reservations.
+- **FR-01 Browse course offerings.** The system shall let students browse open offerings and see their course name, schedule, and available seats.
+- **FR-02 Reserve a seat.** The system shall let a signed-in student reserve a seat in an open offering, confirm the reservation, and reduce the available seat count by one. It shall reject reservations for closed or full offerings and duplicate active reservations by the same student.
+- **FR-03 View reservations.** The system shall let signed-in students view their own reservations and their current status.
+- **FR-04 Cancel a reservation.** The system shall let students cancel their own active reservations and release the corresponding seats.
+- **FR-05 Manage course offerings.** The system shall let authorized administrators create and update offerings, set their seat limits, and open or close reservations. It shall reject seat limits below the number of active reservations.
+- **FR-06 View course rosters.** The system shall let authorized administrators view the list of students with active reservations for each offering.
 
 ## Non-functional requirements
 
-Non-functional requirements describe how well the system shall work and the constraints it shall meet. The times and workload below are proposed lab targets.
+Non-functional requirements describe how well the system shall work and what constraints it shall satisfy. The numerical targets below are proposed for lab testing.
 
-- **NFR-01 — Performance.** At least 95% of course list and reservation requests shall finish within two seconds in a lab test with 50 concurrent users.
-- **NFR-02 — Security.** The system shall use HTTPS and enforce role and ownership checks on the server. In an access test, a student shall be denied access to another student's reservation and to course administration.
-- **NFR-03 — Data consistency.** When two students request the last seat at the same time, the system shall confirm exactly one reservation and the available seat count shall remain nonnegative.
-- **NFR-04 — Reliability.** Confirmed reservations and cancellations shall retain their recorded status after an application restart.
-- **NFR-05 — Usability.** Students shall be able to browse, reserve and cancel using a desktop browser at 1280 px and a mobile browser at 360 px without horizontal scrolling.
+- **NFR-01 Performance.** With 50 concurrent users, at least 95% of browse and reservation requests shall respond within 2 seconds.
+- **NFR-02 Security.** Protected functions shall require authentication. Access tests shall verify that students cannot read or cancel another student's reservation or use administrator functions. The deployed system shall use HTTPS for sign-in and authenticated pages.
+- **NFR-03 Reliability.** When two eligible students request the last seat at the same time, exactly one reservation shall succeed. Failed requests shall leave the seat count and reservation records consistent.
+- **NFR-04 Usability.** Browse, reserve, view, and cancel shall work in desktop and mobile browsers at viewport widths of 1280 and 360 pixels without horizontal scrolling.
+- **NFR-05 Availability.** The service shall be reachable at least 99% of the time during the published reservation period, measured by one availability check per minute.
